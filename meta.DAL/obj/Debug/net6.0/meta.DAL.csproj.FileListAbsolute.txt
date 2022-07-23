@@ -1,0 +1,14 @@
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\bin\Debug\net6.0\meta.DAL.deps.json
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\bin\Debug\net6.0\meta.DAL.runtimeconfig.json
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\bin\Debug\net6.0\meta.DAL.dll
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\bin\Debug\net6.0\meta.DAL.pdb
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\obj\Debug\net6.0\meta.DAL.csproj.AssemblyReference.cache
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\obj\Debug\net6.0\meta.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\obj\Debug\net6.0\meta.DAL.AssemblyInfoInputs.cache
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\obj\Debug\net6.0\meta.DAL.AssemblyInfo.cs
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\obj\Debug\net6.0\meta.DAL.csproj.CoreCompileInputs.cache
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\obj\Debug\net6.0\meta.DAL.dll
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\obj\Debug\net6.0\refint\meta.DAL.dll
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\obj\Debug\net6.0\meta.DAL.pdb
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\obj\Debug\net6.0\meta.DAL.genruntimeconfig.cache
+D:\Coures_.Net\Asp\Session5_Core\meta.DAL\obj\Debug\net6.0\ref\meta.DAL.dll

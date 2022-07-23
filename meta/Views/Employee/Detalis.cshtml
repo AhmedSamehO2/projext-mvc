@@ -1,0 +1,55 @@
+﻿@model meta.BLL.Model.EmployeeVM
+
+@{
+    ViewData["Title"] = "Detalis";
+}
+<h1>Detalis</h1>
+
+
+     <form asp-controller="Employee" asp-action="Detalis">
+    <label> Employee Name </label>
+    <input type="text" asp-for="Name" disabled class="form-control" />
+    <br />
+     <label> Employee Salary </label>
+    <input type="text" asp-for="Salary" disabled class="form-control" />
+       <br />
+     <label> Employee Email </label>
+    <input type="text" asp-for="Email" disabled class="form-control" />
+     <br />
+    
+     <label> Employee Address </label>
+    <input type="text" asp-for="Address" disabled class="form-control" />
+         <br />
+    
+     <label> Employee District </label>
+    <input type="text" asp-for="District.DistrictName" disabled class="form-control" />
+
+       <br />
+     <label> Employee HireData </label>
+    <input type="text" asp-for="Hiredate" disabled class="form-control" />
+       <br />
+         <label> Employee DepartmentName </label>
+    <input type="text" asp-for="Department.DepartmentName" disabled class="form-control" />
+       <br />
+                  <label>PhotoUrl</label>
+              <div class="">
+                  <div class="form-group w-100">
+                      <img src="~/Files/Image/@Model.Photo" width="100" height="100" />
+                  </div>
+              </div>
+     <label> Employee Note </label>
+   <textarea type="text" asp-for="Notes" disabled class="form-control"></textarea>
+        <label> Employee IsActiv </label>
+   <div class="demo-checkbox">
+        <input type="checkbox" asp-for="IsActive" disabled>
+        <label asp-for="IsActive">IsActive</label>
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+    </div>
+       <br />
+    <center>
+        <a  class="btn btn-primary">Edit</a>
+        <a asp-controller="Employee" asp-action="Delete"  class="btn btn-danger" asp-route-id="@Model.Id">delete</a>
+        <a asp-controller="Employee" asp-action="Index" class="btn btn-success">Back</a>
+    </center>
+</form>
+

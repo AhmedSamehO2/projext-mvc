@@ -1,0 +1,242 @@
+﻿@model IEnumerable<meta.BLL.Model.EmployeeVM>;
+ 
+
+@{
+    ViewData["Title"] = "Employee";
+   
+}
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" >
+ Add Anthor Employee
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="Details" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div class="row">
+          <div class=" container">
+              <label>Name</label>
+              <div class="">
+                  <div class="form-group w-100">
+                      <input disabled id="txtName" class="form-control" />
+                  </div>
+              </div>
+                <label>Salary</label>
+              <div class="">
+                  <div class="form-group w-100">
+                      <input disabled id="txtSalary" class="form-control" />
+                  </div>
+              </div>
+                 <label>Email</label>
+              <div class="">
+                  <div class="form-group w-100">
+                      <input disabled id="txtEmail" class="form-control" />
+                  </div>
+              </div>
+                   <label>HireDate</label>
+              <div class="">
+                  <div class="form-group w-100">
+                      <input disabled id="txtHiredate" class="form-control" />
+                  </div>
+              </div>
+                 <label>Notes</label>
+              <div class="">
+                  <div class="form-group w-100">
+                      <input disabled id="txtNotes" class="form-control" />
+                  </div>
+              </div>
+               <label>DepartmentName</label>
+              <div class="">
+                  <div class="form-group w-100">
+                      <input disabled id="txtDepartment" class="form-control" />
+                  </div>
+              </div>
+              <label>PhotoUrl</label>
+              <div class="">
+                  <div class="form-group w-100">
+               <img   width="100" height="100"   id="prodFront"/>
+                  </div>
+              </div>
+               <label>DistrictName</label>
+              <div class="">
+                  <div class="form-group w-100">
+                      <input disabled id="txtDistrict" class="form-control" />
+                  </div>
+              </div>
+              
+               <label>IsActive</label>
+              <div class="">
+                  <div class="form-group w-100">
+                      <input disabled id="txtIsActiv" class="form-control" />
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<form  asp-controller="Employee" asp-action="Index" class="py-4 form-group">
+    <div class="row">
+        <div class=" col-md-10">
+            <input class="form-control" type="text" placeholder="pleas search value" name="SearchValue"/>
+        </div>
+        <div class=" col-md-2">
+            <input type="submit"  class="btn btn-success"/>
+        </div>
+    </div>
+</form>
+
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>Welcome To Employee</h2>
+                       <a asp-controller="Employee" asp-action="create" class="btn btn-info">Add New Employee</a>
+                        <ul class="header-dropdown m-r--5">
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="material-icons">more_vert</i>
+                                </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="javascript:void(0);">Action</a></li>
+                                    <li><a href="javascript:void(0);">Another action</a></li>
+                                    <li><a href="javascript:void(0);">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                            <thead>
+        <tr>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Email</th>
+            <th>HireDate</th>
+            <th>DepartmentName</th>
+            <th>Detailes</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) 
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Salary</td>
+                <td>@item.Email</td>
+                <td>@item.Hiredate.ToShortDateString()</td>
+                <td>@item.Department.DepartmentName</td>
+
+               <td>
+                   <input class="btn btn-success" onclick="details(@item.Id)" value="Detaiels"
+                   data-toggle="modal" data-target="#Details"/>
+               </td>
+                 <td>
+                   <a asp-controller ="Employee" asp-action="Edit" 
+                   asp-route-id="@item.Id" class="btn btn-info">Edit</a>
+               </td>
+               <td>
+                   <a class="btn btn-danger" 
+                   asp-controller="Employee" asp-action="Delete"
+                    asp-route-id="@item.Id">Delete</a>
+
+               </td>
+               
+            </tr>
+        }
+    </tbody>
+    </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    @section Mydatatable{
+        <script>
+            function details(Id)
+            {
+                debugger;
+                $.ajax({
+                    type:"Get",
+                    url:"/Employee/Detalis",
+                    data:{id:Id},
+                    success:function(res){
+                        debugger;
+                        $("#txtName").val(res.Name);
+                        $("#txtSalary").val(res.Salary);
+                        $("#txtEmail").val(res.Email);
+                        $("#txtHiredate").val(res.Hiredate);
+                        $("#txtNotes").val(res.Notes);
+                        $("#txtDepartment").val(res.Department.DepartmentName);
+                        $("#txtDistrict").val(res.District.DistrictName);
+                        $("#txtIsActiv").val(res.IsActive);
+                        $("#prodFront").attr("src",Files/Image/res.PhotoUrl);
+                       // $("#prodFront").attr("src",res.PhotoUrl);
+                      
+
+                       
+                        console.log(res);
+                    
+                    },
+                    error:function(err){
+                        console.log(err);
+                    }
+                });
+            }
+              $(function () {
+                $('.js-basic-example').DataTable({
+                    responsive: true,
+                    paging: true,
+                    pageLength: 5,
+                    bSort: true,
+                    bFilter: true,
+                    bLengthChange: true,
+                    bInfo: true,
+                    lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+
+                });
+            });
+        </script>
+    }
+
+
+
+
+
+
+

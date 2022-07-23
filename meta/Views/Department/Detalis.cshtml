@@ -1,0 +1,25 @@
+﻿@model meta.BLL.Model.DepartmentVM
+
+@{
+    ViewData["Title"] = "Detalis";
+    
+}
+
+
+<h1>Detalis</h1>
+
+<form asp-controller="Department" asp-action="Detalis">
+    <label> Department Name </label>
+    <input type="text" asp-for="DepartmentName" disabled class="form-control" />
+    <br />
+     <label> Department Id </label>
+    <input type="text" asp-for="DepartmentCode" disabled class="form-control" />
+
+    <center>
+        <a  class="btn btn-primary">Edit</a>
+        <a asp-controller="Department" asp-action="Delete"  class="btn btn-danger" asp-route-id="@Model.Id">delete</a>
+        <a asp-controller="Department" asp-action="Index" class="btn btn-success">Back</a>
+
+    </center>
+</form>
+

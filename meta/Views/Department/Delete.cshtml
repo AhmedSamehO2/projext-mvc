@@ -1,0 +1,24 @@
+﻿@model meta.BLL.Model.DepartmentVM
+
+@{
+    ViewData["Title"] = "Delete";
+    
+}
+
+<h1>Delete</h1>
+
+
+<form asp-controller="Department" asp-action="Delete">
+    <input type="hidden"  asp-for="Id" disabled  />
+    <label> Department Name </label>
+    <input type="text" asp-for="DepartmentName" disabled class="form-control" />
+    <br />
+     <label> Department Id </label>
+    <input type="text" asp-for="DepartmentCode" disabled class="form-control" />
+
+    <center>
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-controller="" asp-action="" class="btn btn-primary" asp-route-id="@Model.Id">Edit</a>
+        <a asp-controller="Department" asp-action="Index" class="btn btn-success">Back</a>
+    </center>
+</form>

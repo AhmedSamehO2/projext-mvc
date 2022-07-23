@@ -1,0 +1,80 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = meta
+build_property.RootNamespace = meta
+build_property.ProjectDir = D:\Coures_.Net\Asp\Session5_Core\meta\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Coures_.Net\Asp\Session5_Core\meta
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Areas/Inventory/Views/Stors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW52ZW50b3J5XFZpZXdzXFN0b3JzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/Department/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/Department/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/Department/Detalis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxEZXRhbGlzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/Department/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/Department/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/Employee/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcY3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/Employee/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/Employee/Detalis.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGV0YWxpcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/Employee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/layout/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcbGF5b3V0XF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/Mail/CreateMail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbFxDcmVhdGVNYWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coures_.Net/Asp/Session5_Core/meta/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

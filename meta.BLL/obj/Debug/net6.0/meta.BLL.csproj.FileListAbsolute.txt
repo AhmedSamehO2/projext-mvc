@@ -1,0 +1,15 @@
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\bin\Debug\net6.0\meta.BLL.deps.json
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\bin\Debug\net6.0\meta.BLL.dll
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\bin\Debug\net6.0\meta.BLL.pdb
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\bin\Debug\net6.0\meta.DAL.dll
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\bin\Debug\net6.0\meta.DAL.pdb
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\obj\Debug\net6.0\meta.BLL.csproj.AssemblyReference.cache
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\obj\Debug\net6.0\meta.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\obj\Debug\net6.0\meta.BLL.AssemblyInfoInputs.cache
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\obj\Debug\net6.0\meta.BLL.AssemblyInfo.cs
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\obj\Debug\net6.0\meta.BLL.csproj.CoreCompileInputs.cache
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\obj\Debug\net6.0\meta.BLL.csproj.CopyComplete
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\obj\Debug\net6.0\meta.BLL.dll
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\obj\Debug\net6.0\refint\meta.BLL.dll
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\obj\Debug\net6.0\meta.BLL.pdb
+D:\Coures_.Net\Asp\Session5_Core\meta.BLL\obj\Debug\net6.0\ref\meta.BLL.dll

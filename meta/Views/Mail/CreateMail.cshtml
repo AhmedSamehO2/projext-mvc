@@ -1,0 +1,25 @@
+﻿@model meta.BLL.Model.MailVM;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/layout/_Layout.cshtml";
+}
+
+
+<div class="alert alert-success">
+  <strong>@TempData["Msg"]</strong>
+</div>
+
+<form asp-action="CreateMail" asp-controller="Mail"  class="form-group">
+    <label asp-for="Title">Title</label>
+    <input type="text" asp-for="Title" class="form-control" />
+    <label asp-for="Message">Message</label>
+    <textarea asp-for="Message" rows="4" class="form-control">
+
+    </textarea>
+
+    <center>
+        <input  class="btn btn-primary" type="submit" value="send"/>
+    </center>
+</form>
+
+

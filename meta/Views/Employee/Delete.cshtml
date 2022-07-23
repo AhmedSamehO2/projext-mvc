@@ -1,0 +1,51 @@
+﻿@model meta.BLL.Model.EmployeeVM
+
+@{
+    ViewData["Title"] = "Delete";
+
+}
+
+<form asp-controller="Employee" asp-action="Delete">
+    <input type="hidden" asp-for="Id" class="form-control" />
+    <input type="hidden" asp-for="PhotoUrl" class="form-control" />
+    <input type="hidden" asp-for="CvUrl" class="form-control" />
+
+
+    <label> Employee Name </label>
+    <input type="text" asp-for="Name" class="form-control" disabled />
+  
+    <br />
+     <label> Employee Salary </label>
+    <input type="text" asp-for="Salary" class="form-control" disabled />
+      <br />
+     <label> Employee Email </label>
+    <input type="text" asp-for="Email" class="form-control" disabled />
+       <br />
+     <label> Employee HiarDate </label>
+    <input type="date" asp-for="Hiredate" class="form-control" disabled />
+         <br />
+     <label> Employee Address </label>
+    <input type="text" asp-for="Address" class="form-control" disabled />
+         <br />
+     <label> Employee Notes </label>
+    <input type="text" asp-for="Notes" class="form-control" disabled />
+     <div class="demo-checkbox">
+        <input type="checkbox" asp-for="IsActive" checked="">
+        <label asp-for="IsActive">IsActive</label>
+    </div>
+    <select  asp-for="DepartmentId" class="form-control" asp-items="(SelectList)ViewBag.DepartmentList">
+        <option>Chosse Employee </option>
+    </select>
+      <label> Employee DepartmentId </label>
+    <span asp-validation-for="DepartmentId" class="text-danger"></span>
+         <br />
+    <center>
+        <input type="submit" value="Delete" class="btn btn-primary" />
+        <input type="reset" value="cancle" class="btn btn-primary" />
+    </center>
+</form>
+
+
+
+
+

@@ -1,0 +1,125 @@
+﻿@model meta.BLL.Model.EmployeeVM
+
+@{
+    ViewData["Title"] = "create";
+}
+<form asp-controller="Employee" asp-action="create" enctype="multipart/form-data">
+    <label> Employee Name </label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+     <label> Employee Salary </label>
+    <input type="text" asp-for="Salary" class="form-control" />
+    <span asp-validation-for="Salary" class="text-danger"></span>
+      <br />
+     <label> Employee Email </label>
+    <input type="text" asp-for="Email" class="form-control" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+       <br />
+     <label> Employee HiarDate </label>
+    <input type="date" asp-for="Hiredate" class="form-control" />
+    <span asp-validation-for="Hiredate" class="text-danger"></span>
+         <br />
+     <label> Employee Address </label>
+    <input type="text" asp-for="Address" class="form-control" />
+    <span asp-validation-for="Address" class="text-danger"></span>
+         <br />
+     <label> Employee Notes </label>
+    <input type="text" asp-for="Notes" class="form-control" />
+    <span asp-validation-for="Notes" class="text-danger"></span>
+     <div class="demo-checkbox">
+        <input type="checkbox" asp-for="IsActive">
+        <label asp-for="IsActive">IsActive</label>
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+    </div>
+     <label> Employee DepartmentId </label>
+    <select  asp-for="DepartmentId" class="form-control"
+    asp-items="(SelectList)ViewBag.DepartmentList">
+        <option>Chosse Employee </option>
+    </select>
+    <span asp-validation-for="DepartmentId" class="text-danger"></span>
+         <br />
+      <label> Employee Country </label>
+    <select id="CountryList" class="form-control"
+    asp-items="(SelectList)ViewBag.CountryList">
+        <option>Chosse Country Employee </option>
+    </select>
+              <br />
+      <label> Employee City </label>
+    <select id="CityList" class="form-control">
+        <option>Chosse City Employee </option>
+    </select>
+               <br />
+      <label> Employee District </label>
+    <select asp-for="DistrictId" class="form-control">
+        <option>Chosse District Employee </option>
+    </select>
+         <br />
+     <label> Upload Photo </label>
+    <input  asp-for="Photo" class="form-control" />
+          <br />
+     <label> Upload Cv </label>
+    <input  asp-for="Cv" class="form-control" />
+    
+    <center>
+        <input type="submit" value="save" class="btn btn-primary" />
+        <input type="reset" value="cancle" class="btn btn-primary" />
+
+    </center>
+</form>
+
+@section MicroSoftValidation{
+
+    <script src="~/assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <script>
+         
+        $(function(){
+            $("#CountryList").change(function(){
+
+                $("#CityList").empty();
+                 $("#CityList").append("<option>Chosse your City</option>")
+
+                var CountryId = $("#CountryList option:selected").val();
+
+                $.ajax({
+                    type:"POST",
+                    url:"/Employee/GetCityDatabyCountryId",
+                    data:{CtryId:CountryId},
+                    success:function(res){
+
+                        $.each(res,(i,e)=>{
+                            $("#CityList").append("<option value='"+e.Id+"'>"+e.CityName+"</option>")
+                        })
+                    
+                    }
+                });
+            })
+        
+               $("#CityList").change(function(){
+
+                $("#DistrictId").empty();
+                 $("#DistrictId").append("<option>Chosse your District</option>")
+
+                var CityId = $("#CityList option:selected").val();
+
+                $.ajax({
+                    type:"POST",
+                    url:"/Employee/GetDistrictbyCityId",
+                    data:{ctyId:CityId},
+                    success:function(res){
+
+                        $.each(res,(i,e)=>{
+                            $("#DistrictId").append("<option value='"+e.Id+"'>"+e.DistrictName+"</option>")
+                        })
+                    
+                    }
+                });
+            })
+        })
+    
+    </script>
+
+
+}

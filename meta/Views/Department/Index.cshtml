@@ -1,0 +1,107 @@
+﻿@model IEnumerable<meta.BLL.Model.DepartmentVM>
+
+
+@{
+    ViewData["Title"] = "Department";
+   
+}
+
+<form  asp-controller="Department" asp-action="Index" class="py-4 form-group">
+    <div class="row">
+        <div class=" col-md-10">
+            <input class="form-control" type="text" placeholder="pleas search value" name="SearchValue"/>
+        </div>
+        <div class=" col-md-2">
+            <input type="submit"  class="btn btn-success"/>
+        </div>
+    </div>
+</form>
+
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>Welcome To Employee</h2>
+                       <a asp-controller="Department" asp-action="create" class="btn btn-info">Add</a>
+                        <ul class="header-dropdown m-r--5">
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="material-icons">more_vert</i>
+                                </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="javascript:void(0);">Action</a></li>
+                                    <li><a href="javascript:void(0);">Another action</a></li>
+                                    <li><a href="javascript:void(0);">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                            <thead>
+        <tr>
+            <th>Id</th>
+            <th>DepartmentName</th>
+            <th>DepartmentId</th>
+            <th>Detailes</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) 
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.DepartmentName</td>
+                <td>@item.DepartmentCode</td>
+               <td>
+                   <a asp-controller ="Department" asp-action="Detalis" 
+                 asp-route-id="@item.Id"  class="btn btn-success">Detaiels</a>
+               </td>
+                 <td>
+                   <a asp-controller ="Department" asp-action="Edit" 
+                 asp-route-id="@item.Id" class="btn btn-info">Edit</a>
+               </td>
+               <td>
+                   <a class="btn btn-danger" 
+                   asp-controller="Department" asp-action="Delete"
+                   asp-route-id="@item.Id">Delete</a>
+               </td>
+            </tr>
+        }
+    </tbody>
+    </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    @section Mydatatable{
+        <script>
+              $(function () {
+                $('.js-basic-example').DataTable({
+                    responsive: true,
+                    paging: true,
+                    pageLength: 5,
+                    bSort: true,
+                    bFilter: true,
+                    bLengthChange: true,
+                    bInfo: true,
+                    lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+
+                });
+            });
+        </script>
+    }
+
+
+
+

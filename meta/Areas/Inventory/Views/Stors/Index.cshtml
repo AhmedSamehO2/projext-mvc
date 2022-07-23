@@ -1,0 +1,32 @@
+﻿@using meta.BLL.Interface
+
+@inject IDepartmentRep department
+@inject IEmployeeRep Employee
+
+
+
+@{
+    ViewData["Title"] = "Stores";
+    Layout = "~/Views/layout/_Layout.cshtml";
+}
+
+<h2>List Of Department</h2>
+
+
+<ul>
+    @foreach (var item in department.Get())
+    {
+        <li>@item.DepartmentName</li>
+    }
+</ul>
+
+
+<h2>List Of Employee</h2>
+
+
+<ul>
+    @foreach (var item in Employee.Get())
+    {
+        <li>@item.Name</li>
+    }
+</ul>
